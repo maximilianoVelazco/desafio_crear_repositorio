@@ -1,0 +1,802 @@
+/* ESTILOS BASICOS Y RESET */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto Flex', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    color: #141414;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+/* FUENTES Y TEXTO */
+/* FUENTES */
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+}
+
+h3 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+}
+
+h5 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+}
+
+a {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 27px;
+    margin-bottom: 3rem;
+}
+
+.txtWhite {
+    color: whitesmoke;
+}
+
+/* CONTENEDORES GENERALES */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tittle {
+    text-align: center;
+    max-width: 80%;
+    margin: 5rem auto;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.verticalBox{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ESTILOS PARA LOS BOTONES */
+button {
+    border: none;
+    display: inherit;
+    background-color: transparent;
+}
+
+.btnTransparent a {
+    font-weight: 700;
+    display: inline-block;
+    padding: 16px 52px;
+    border: 2px solid #141414;
+    background-color: transparent;
+}
+
+.btnTransparent a:hover {
+    background-color: #141414;
+    color: whitesmoke;
+}
+
+/* Boton subir */
+#arriba {
+    position: absolute;
+    top: 0;
+}
+
+.irArriba a {
+    width: 100%;
+    height: 100%;
+}
+
+.irArriba img {
+    width: 45px;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.irArriba img:hover,
+.menuSocial img:hover {
+    background-color: #c4c4c4;
+}
+
+/* fin boton subir */
+
+/* botones redes sociales */
+.menuSocial {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.menuSocial img {
+    width: 60px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ESTILOS HEADER */
+header {
+    height: 8rem;
+    padding: 0 18px;
+    background-color: #fefefe;
+    border-bottom: 1px solid rgba(250, 235, 215, 0.8);
+}
+
+header .container,
+ul {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    display: inline-block;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+    border-bottom: 3px solid transparent;
+}
+
+header a:hover,
+.active {
+    border-color: #141414;
+}
+
+/* ESTILOS PARA EL MAIN */
+
+.heroInicio {
+    background-image: url(../assets/img/background/bgIndex.jpg);
+}
+
+.heroServicios {
+    background-image: url(../assets/img/background/bgServicios.jpg);
+}
+
+.heroProyectos {
+    background-image: url(../assets/img/background/bgProyectos.jpg);
+}
+
+.heroInterno {
+    background-image: url(../assets/img/background/bgHero.jpg);
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    padding: 0 18px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h2,
+.hero p {
+    max-width: 45%;
+}
+
+/* +++++++++++++++++++++++++++++++++++ SOLO INDEX.HTML ++++++++++++++++++++++++++++++++++++ */
+/* ********************************** GRID LAYOUT INICIO ********************************** */
+.gridLayoutInicio {
+    display: grid;
+    grid-template-areas:
+        "tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard tittleCard"
+        "card1 card1 card1 card2 card2 card2 card3 card3 card3 card4 card4 card4"
+        "boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos"
+        "boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxContacto boxContacto boxContacto boxContacto boxContacto boxContacto";
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 2rem;
+    grid-template-rows: auto auto auto;
+    padding: 0 18px;
+}
+
+.gridLayoutInicio .tittle {
+    grid-area: tittleCard;
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.boxQuienesSomos {
+    grid-area: boxQuienesSomos;
+}
+
+.boxQueHacemos {
+    grid-area: boxQueHacemos;
+}
+
+.boxUbicacion {
+    grid-area: boxUbicacion;
+}
+
+.boxContacto {
+    grid-area: boxContacto;
+}
+
+/* ********************************** FINAL GRID LAYOUT INICIO ********************************** */
+
+/* estilos para las cards con imagenes en el index  */
+.card {
+    width: auto;
+    max-width: 320px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover .bgCard {
+    opacity: 0.7;
+}
+
+.card:hover .cardTxt {
+    opacity: 1;
+}
+
+.card1,
+.card4 {
+    animation-delay: 0.2s !important;
+}
+
+.card img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.card .bgCard {
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 1);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.card .cardTxt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.cardTxt>h5 {
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+/* +++++++++++++++++++++++++++++++++++ FINAL SOLO INDEX.HTML ++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* +++++++++++++++++++++++++++++++++++++ SOLO PROYECTOS.HTML ++++++++++++++++++++++++++++++++++++ */
+/* ************************************ GRID LAYOUT PROYECTOS *********************************** */
+.gridLayoutProyectos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "tittle tittle tittle tittle tittle tittle tittle tittle tittle tittle tittle tittle"
+        "box1 box1 box1 box1 box1 box1 box1 box1 box2 box2 box2 box2"
+        "box3 box3 box3 box3 box4 box4 box4 box4 box5 box5 box5 box5"
+        "box6 box6 box6 box6 box7 box7 box7 box7 box7 box7 box7 box7"
+        "box8 box8 box8 box8 box8 box8 box8 box8 box9 box9 box9 box9"
+        "box8 box8 box8 box8 box8 box8 box8 box8 box10 box10 box10 box10"
+        "box8 box8 box8 box8 box8 box8 box8 box8 box10 box10 box10 box10"
+        "boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxContacto boxContacto boxContacto boxContacto boxContacto boxContacto";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 400px 400px 400px 200px 200px 100px auto;
+    padding: 0 18px;
+}
+
+.heroProyectos {
+    grid-area: hero;
+}
+
+.gridLayoutProyectos .tittle {
+    grid-area: tittle;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    grid-area: box3;
+}
+
+.box4 {
+    grid-area: box4;
+}
+
+.box5 {
+    grid-area: box5;
+}
+
+.box6 {
+    grid-area: box6;
+}
+
+.box7 {
+    grid-area: box7;
+}
+
+.box8 {
+    grid-area: box8;
+}
+
+.box9 {
+    grid-area: box9;
+}
+
+.box10 {
+    grid-area: box10;
+}
+
+.boxGaleria {
+    overflow: hidden;
+}
+
+.boxGaleriaImg {
+    background-color: black;
+}
+
+.boxGaleria img {
+    min-height: 100%;
+    transition: opacity 0.35s;
+}
+
+.boxGaleriaImg:hover img {
+    opacity: 0.3;
+}
+
+.box2,
+.box4,
+.box6,
+.box10 {
+    padding: 3rem;
+    text-align: center;
+}
+
+.imgHorizontal img {
+    max-width: 110%;
+}
+
+.imgVertical img {
+    height: 100%;
+}
+
+/* ********************************** FINAL GRID LAYOUT PROYECTOS ******************************* */
+/* +++++++++++++++++++++++++++++++++++ FINAL SOLO PROYECTOS.HTML ++++++++++++++++++++++++++++++++ */
+
+
+/*++++++++++++++++++++++++++++++++++++++++ GRID SERVICIOS ++++++++++++++++++++++++++++++++++++++++*/
+.gridLayoutServicios {
+    display: grid;
+    grid-template-areas:
+        "boxEstudio boxEstudio boxEstudio boxEstudio boxEstudio boxEstudio boxValores boxValores boxValores boxValores boxValores boxValores"
+        "boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner boxBanner"
+        "boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos"
+        "boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxUbicacion boxContacto boxContacto boxContacto boxContacto boxContacto boxContacto";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: 2rem;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.boxNuestroEstudio {
+    grid-area: boxEstudio;
+}
+
+.boxValores {
+    grid-area: boxValores;
+    justify-self: flex-end;
+}
+
+.boxNuestroEstudio,
+.boxValores{
+    max-width: 95%;
+}
+
+.banner {
+    grid-area: boxBanner;
+    width: 100%;
+    height: 300px;
+    margin-top: 10rem;
+    background-image: url(../assets/img/fotos/casaDosPisos.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*+++++++++++++++++++++++++++++++++++++ FINAL GRID SERVICIOS +++++++++++++++++++++++++++++++++++++*/
+
+.tarjetaBox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.iconBox {
+    width: 115px;
+    height: 115px;
+    padding: 5px;
+    margin-right: 70px;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.bg1 {
+    background-color: #c4c4c4;
+}
+
+.bg2 {
+    background-color: #EEE8BE;
+}
+
+.bg3 {
+    background-color: #BEC1ED;
+}
+
+.bg4 {
+    background-color: #B2DFDB;
+}
+
+/* CONTACTO Y UBICACION */
+label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: #E5E5E5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 2.5rem;
+}
+
+iframe {
+    width: 80%;
+    height: 350px;
+    border: none;
+}
+
+footer {
+    padding: 1.5rem 0;
+    margin-top: 10rem;
+}
+
+footer .logo {
+    font-size: 4rem;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/* tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt */
+/************************ MEDIASQUERIES TABLET ************************/
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    html {
+        font-size: 58%;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: auto;
+        padding: 5rem;
+        max-height: 700px;
+    }
+
+    .hero .container {
+        padding: 0 50px;
+    }
+
+    .hero h2,
+    .hero p {
+        max-width: 70%;
+    }
+
+    .gridLayoutInicio {
+        display: grid;
+        grid-template-areas:
+            "tittleCard tittleCard tittleCard tittleCard"
+            "card1 card1 card2 card2"
+            "card3 card3 card4 card4"
+            "boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQuienesSomos"
+            "boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos"
+            "boxContacto boxContacto boxContacto boxContacto"
+            "boxUbicacion boxUbicacion boxUbicacion boxUbicacion";
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 2rem;
+        grid-template-rows: repeat(7, auto);
+    }
+
+    .gridLayoutProyectos {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-areas:
+            "tittle tittle"
+            "box1 box1"
+            "box2 box3"
+            "box7 box7"
+            "box4 box5"
+            "box6 box6"
+            "box8 box8"
+            "box10 box10"
+            "box9 box9"
+            "boxContacto boxContacto"
+            "boxUbicacion boxUbicacion";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(4, auto) 200px auto 200px auto auto;
+    }
+
+    .gridLayoutServicios {
+        display: grid;
+        grid-template-areas:
+            "boxEstudio boxEstudio boxValores boxValores"
+            "boxQuienesSomos boxQuienesSomos boxQuienesSomos boxQuienesSomos"
+            "boxBanner boxBanner boxBanner boxBanner"
+            "boxQueHacemos boxQueHacemos boxQueHacemos boxQueHacemos"
+            "boxContacto boxContacto boxContacto boxContacto"
+            "boxUbicacion boxUbicacion boxUbicacion boxUbicacion";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .imgHorizontal img {
+        height: 100%;
+    }
+
+    .imgVertical img {
+        width: auto;
+    }
+
+    button a {
+        width: 100%;
+    }
+
+    button,
+    iframe {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 3.8rem;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+        min-height: 350px;
+    }
+
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ***********************MEDIAS QUERIES MOBILE*********************** */
+
+
+@media (max-width: 600px) {
+
+    * {
+        width: 100%;
+    }
+
+    html {
+        font-size: 55.5555%;
+    }
+
+    h3,
+    .textBox {
+        text-align: center;
+    }
+
+    /* CAMBIOS AL HEADER */
+    header {
+        height: auto;
+    }
+
+    header .logo {
+        padding: 1rem 0 1.5rem 0;
+    }
+
+    header nav ul li,
+    .logo {
+        width: auto;
+        text-align: center;
+    }
+
+    header a {
+        padding: 1rem .8rem;
+    }
+
+    header .container,
+    ul {
+        justify-content: center;
+        padding: 0;
+    }
+
+    /* CAMBIOS AL HERO */
+    .hero {
+        height: 70vh;
+        justify-content: flex-end;
+        margin-bottom: 5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero p,
+    .hero h2 {
+        max-width: 100%;
+    }
+
+    .tarjetaBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjetaBox .iconBox {
+        margin: 0 0 3rem 0;
+    }
+
+    .gridLayoutInicio {
+        display: grid;
+        grid-template-areas:
+            "tittleCard"
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "boxQuienesSomos"
+            "boxQueHacemos"
+            "boxContacto"
+            "boxUbicacion";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        justify-items: center;
+    }
+
+    .gridLayoutInicio .tittle {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gridLayoutProyectos {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-areas:
+            "tittle tittle"
+            "box1 box1"
+            "box2 box3"
+            "box7 box7"
+            "box4 box5"
+            "box6 box6"
+            "box8 box8"
+            "box10 box10"
+            "box9 box9"
+            "boxContacto boxContacto"
+            "boxUbicacion boxUbicacion"
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(11, auto);
+    }
+
+    .imgHorizontal img {
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .imgVertical img {
+        width: 100%;
+    }
+
+    .heroProyectos {
+        background-position: unset;
+    }
+
+    .gridLayoutServicios {
+        display: grid;
+        grid-template-areas:
+            "boxEstudio"
+            "boxValores"
+            "boxBanner"
+            "boxQuienesSomos"
+            "boxQueHacemos"
+            "boxContacto"
+            "boxUbicacion";
+        grid-template-columns: 1fr;
+        column-gap: 1rem;
+        grid-template-rows: repeat(7, auto);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card .cardTxt,
+    card>.cardTxt>p {
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
